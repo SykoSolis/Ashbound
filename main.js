@@ -36,10 +36,6 @@ let titleGlow;
 // ---------------------
 function preload() {
     this.load.image('titleBackground', 'assets/title-background.png');
-
-    this.load.on('loaderror', function(file) {
-        console.log('Failed to load: ' + file.key);
-    });
 }
 
 // ---------------------
@@ -74,18 +70,10 @@ function create() {
         this.cameras.main.centerY - 50,
         "ASHBOUND",
         {
-            fontFamily: "'Press Start 2P', cursive",
-            fontSize: '64px',
+            fontSize: '72px',
             fill: '#ff6b35',
             stroke: '#000000',
-            strokeThickness: 8,
-            shadow: {
-                offsetX: 0,
-                offsetY: 0,
-                color: '#ff6b35',
-                blur: 20,
-                fill: true
-            }
+            strokeThickness: 8
         }
     );
     titleGlow.setOrigin(0.5);
@@ -95,8 +83,7 @@ function create() {
         this.cameras.main.centerY - 50,
         "ASHBOUND",
         {
-            fontFamily: "'Press Start 2P', cursive",
-            fontSize: '64px',
+            fontSize: '72px',
             fill: '#ffffff',
             stroke: '#ff6b35',
             strokeThickness: 4
@@ -136,8 +123,7 @@ function create() {
         this.cameras.main.centerY + 120,
         "Press any key to start...",
         {
-            fontFamily: "'Press Start 2P', cursive",
-            fontSize: '20px',
+            fontSize: '24px',
             fill: '#aaaaaa',
             stroke: '#000000',
             strokeThickness: 4
